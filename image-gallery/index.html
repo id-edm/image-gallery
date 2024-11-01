@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link type="image/png" href="./assets/favicon/favicon-32x32.png" rel="icon">
+	<title>image-gallery</title>
+</head>
+<body class="body">
+    <header class="header">
+      <div class="title">
+        <img class="title__image" src="./assets/img/camera.svg" alt="photo-camera" >
+        <h1 class="title__text">Image Gallery </h1>
+      </div>
+      <form class="search" action="url">
+        <div class="wrapper__input">
+          <input class="search__input" type="text" placeholder="Enter image search . . . " autocomplete="off">
+          <span class="clear"></span>
+					<button class="search__btn" type="submit" aria-label="Search images">Search</button>
+        </div>
+      </form>
+    </header>
+    <main class="image__gallery-display">
+      <section class="results">
+      </section>
+    </main>
+		<footer class="footer">
+			<a class="link" href="https://github.com/id-edm">
+				<img class="footer-icon" src="./assets/icons/github.svg">
+			</a>
+			<p class="created-date"> September 2024</p>
+			<a class="link" href="https://rs.school/courses/javascript-ru">
+				<img class="footer-icon" src="./assets/icons/RS_recolored.svg" >
+			</a>
+		</footer>
+  <script src="./main.js"></script>
+</body>
+</html>

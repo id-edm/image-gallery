@@ -1,0 +1,272 @@
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('../assets/fonts/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+  font-family: Ubuntu-Medium;
+  src: url('../assets/fonts/Ubuntu-Medium.ttf');
+}
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('../assets/fonts/Ubuntu-Bold.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Ubuntu-Regular;
+}
+
+body {
+  line-height: 1.8;
+  background-color: rgb(230, 221, 221);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.header {
+  position: sticky;
+  height: 200px;
+  top: 0;
+	padding-bottom: 20px;
+  z-index: 1;
+  background-color: rgba(168, 168, 168, 0.5);
+  transition: transform 0.8s linear;
+	margin-bottom: 30px;
+}
+
+.hide {
+  transform: translateY(-200px);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	cursor: default;
+}
+
+.title__image {
+  width: 60px;
+  margin-right: 20px;
+}
+
+.title__text {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.search__input {
+  width: 100%;
+  box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: rgb(116, 112, 112);
+  outline: none;
+}
+
+.search__btn {
+  padding: 10px 15px;
+  background-color: rgb(175, 180, 200);
+  border: none;
+  border-radius: 10px;
+  margin-left: 5px;
+  box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color, color 0.2s ease-in;
+}
+
+/*крестик для очистки инпута*/
+.wrapper__input {
+  width: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.visible {
+	display: block;
+}
+
+.clear {
+  position: absolute;
+  right: 100px;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+	display: none;
+}
+
+.clear::before {
+  position: absolute;
+  content: '';
+  width: 2px;
+  left: 10px;
+  top: 3px;
+  height: 15px;
+  transform: rotate(-45deg);
+  transition: background-color, 0.2s ease-in;
+  background: rgb(175, 180, 200);
+}
+
+.clear::after {
+  position: absolute;
+  content: '';
+  left: 10px;
+  top: 3px;
+  width: 2px;
+  height: 15px;
+  transform: rotate(45deg);
+  transition: background-color, 0.2s ease-in;
+  background: rgb(175, 180, 200);
+}
+
+.search__btn:active {
+  background-color: rgb(57, 167, 201);
+}
+
+.image__gallery-display {
+	flex-grow: 1;
+	margin: 0 30px;
+}
+
+.results {
+  column-count: 3;
+  column-gap: 30px;
+}
+
+.results__search {
+  position: relative;
+  display: flex;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+	margin-bottom: 30px;
+}
+
+.results__search-img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(168, 168, 168, 0.5);
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+}
+
+.download {
+  position: absolute;
+  text-decoration: none;
+  font-size: 16px;
+  right: 18px;
+  top: 90%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-image: url('../assets/icons/download.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.likes {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: default;
+  color: white;
+  font-size: 16px;
+  left: 18px;
+  top: 90%;
+  transform: translateY(-50%);
+}
+
+.likes::before {
+  content: '';
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 28px;
+  height: 28px;
+  background-image: url('../assets/icons/like.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.author__photo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: default;
+  color: white;
+  font-size: 16px;
+  left: 18px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+
+@media (hover: hover) {
+  .results__search:hover .results__search-img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+  .clear:hover::after {
+    background-color: black;
+  }
+  
+  .clear:hover::before {
+    background: black;
+  }
+
+  .search__btn:hover {
+    background-color: rgb(93, 201, 231);
+    color: black;
+  }
+
+  .download:hover {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .results {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .results {
+    column-count: 1;
+  }
+}
