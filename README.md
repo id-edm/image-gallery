@@ -4,12 +4,12 @@ This is a responsive image gallery app that fetches images from the Unsplash API
 
 ## 🛠 Technologies
 
-- **HTML5** – семантическая разметка и структура контента
-- **CSS3** – стилизация, адаптивность, hover-эффекты
-- **JavaScript (ES6+)** – логика приложения, обработка событий, работа с DOM
-- **Unsplash API** – получение изображений по ключевым словам
-- **Fetch API** – выполнение HTTP-запросов
-- **Git & GitHub** – контроль версий, деплой через GitHub Pages
+- **HTML5** – semantic markup and content structure
+- **CSS3** – styling, responsive design, hover effects
+- **JavaScript (ES6+)** – application logic, event handling, DOM manipulation
+- **Unsplash API** – fetching images by keywords
+- **Fetch API** – making HTTP requests
+- **Git & GitHub** – version control, deployment via GitHub Pages
 
 ## 🔗 Demo
 
